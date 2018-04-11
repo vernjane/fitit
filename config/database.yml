@@ -21,7 +21,6 @@ test:
 production:
   <<: *default
   host: mysql-tryitontoday.cuxn4i8bynjf.us-east-1.rds.amazonaws.com
-  database: fitit
   username: janevern
   password: ilmhPVvm1
   port: 3306
