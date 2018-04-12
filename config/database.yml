@@ -20,9 +20,10 @@ test:
 # DATABASE_URL="mysql2://myuser:mypass@localhost/somedatabase"
 production:
   <<: *default
-  host: mysql-tryitontoday.cuxn4i8bynjf.us-east-1.rds.amazonaws.com
+  host: redpineapple.cdndxqoeul8v.us-west-2.rds.amazonaws.com
   username: janevern
-  password: ilmhPVvm1
+  password: helloworld123
+  database: fitit_prod
   port: 3306
   #port: 3303
   #host: avetty-production.cdndxqoeul8v.us-west-2.rds.amazonaws.com
