@@ -1,0 +1,24 @@
+
+<div class="container-fluid">
+    
+    <div class="row">
+        <div class="col-12">
+            <h1>We're available <%= @location.city %>, <%=@location.state%></h1>
+        </div>
+        
+    </div>
+    <hr>
+
+    <% @malls.each do |mall| %>   
+        <div class="row">
+            <div class="col-12">
+                <p><%=mall.name%></p>
+            </div>
+            <div class="col-12">
+                <p><%=mall.address%></p>
+            </div>
+        </div>
+        <hr>
+    <% end %>
+    
+</div>

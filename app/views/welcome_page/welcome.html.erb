@@ -1,2 +1,11 @@
-<h1>WelcomePage#welcome</h1>
-<p>Find me in app/views/welcome_page/welcome.html.erb</p>
+<div class="container-fluid>">
+    <div class="row justify-content-lg-center">
+        <h1 class="h3 font-weight-normal">Try It On Today</h1>
+    </div>
+    <div class="row justify-content-lg-center">
+        <%= form_tag({controller: "malls", action: "index"}, method: "get") do %>
+            <input type="text" class="form-control" placeholder="Postal Code" aria-label="Postal Code" name="location">
+            <button type="submit" class="btn btn-success btn btn-block">Search</button>    
+        <% end %>
+    </div>
+</div>
