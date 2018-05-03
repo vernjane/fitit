@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   root to: "welcome_page#welcome"
   get '/robots.txt', to: 'welcome_page#robots'
 
-  get '/googlef9762a8518fd8479.html', :to '/public/googlef9762a8518fd8479.html'
+  get '/googlef9762a8518fd8479.html', to: '/public/googlef9762a8518fd8479.html'
   resources :articles
 end
