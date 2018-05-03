@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   root to: "welcome_page#welcome"
   get '/robots.txt', to: 'welcome_page#robots'
 
+  match '/googlef9762a8518fd8479.html', :to => redirect('/public/googlef9762a8518fd8479.html')
   resources :articles
 end
