@@ -1,4 +1,20 @@
 <div class="container-fluid>">
+    <div class="row justify-content-center">
+        <div class="col-6">    
+            <h1 style="text-align: center">Same day clothes delivery</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row justify-content-center">
+        <div class="col-4">
+                
+        <%= form_tag({controller: "malls", action: "index"}, method: "get") do %>
+            <input type="text" class="form-control" placeholder="Postal Code" aria-label="Postal Code" name="location">
+            <br>
+            <button type="submit" class="btn btn-success btn btn-block">Search</button>    
+        <% end %>
+        </div>
+    </div>
     <h1>Same day clothes delivery Oakville, Burlington, Milton, Mississauga</h1>
     <h1>Aldo same day delivery</h1>
     <h1>Addition Elle same day delivery</h1>
@@ -46,14 +62,4 @@
     <h1>Victoria's Secret same day delivery</h1>
     <h1>Walking on a cloud same day delivery</h1>
     <h1>Zara same day delivery</h1>
-    
-    <div class="row justify-content-lg-center">
-        <h1 class="h3 font-weight-normal">Try It On Today</h1>
-    </div>
-    <div class="row justify-content-lg-center">
-        <%= form_tag({controller: "malls", action: "index"}, method: "get") do %>
-            <input type="text" class="form-control" placeholder="Postal Code" aria-label="Postal Code" name="location">
-            <button type="submit" class="btn btn-success btn btn-block">Search</button>    
-        <% end %>
-    </div>
 </div>
