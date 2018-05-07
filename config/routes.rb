@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'orders/new'
+
   get 'malls/index'
 
   get 'malls/show'
@@ -7,5 +9,6 @@ Rails.application.routes.draw do
   root to: "welcome_page#welcome"
   get '/robots.txt', to: 'welcome_page#robots'
 
-  resources :articles
+  resources :orders
+  
 end
