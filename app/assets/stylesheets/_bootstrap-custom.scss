@@ -1,0 +1,88 @@
+/*!
+ * Bootstrap v4.1.1 (https://getbootstrap.com/)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+ @import "bootstrap";
+ @import url('https://fonts.googleapis.com/css?family=Muli');
+
+
+
+@mixin column($size) {
+    @include media-breakpoint-up(xs) {
+        @include make-col(12);
+    }
+    @include media-breakpoint-up(sm) {
+        @include make-col(12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col($size);
+    }
+    @include media-breakpoint-up(lg) {
+        @include make-col($size);
+    }
+}
+
+.column-1 {
+    @include column(1)
+}
+
+.column-2 {
+    @include column(2)
+}
+
+.column-3 {
+    @include column(3)
+}
+
+.column-4 {
+    @include column(4)
+}
+
+.column-5 {
+    @include column(5)
+}
+
+.column-6 {
+    @include column(6)
+}
+
+.column-7 {
+    @include column(7)
+}
+
+.column-8 {
+    @include column(8)
+}
+
+.column-9 {
+    @include column(9)
+}
+
+.column-10 {
+    @include column(10)
+}
+
+.column-11 {
+    @include column(11)
+}
+
+.column-12 {
+    @include column(12)
+}
+
+$pink: #cbbde2;
+$purple: #563d7c;
+$white: #ffffff;
+
+ body {
+    font-family: 'Muli', sans-serif;
+    color: $purple;
+ }
+
+ .navigation {
+    background-color: $purple;
+    color: $white;
+ }

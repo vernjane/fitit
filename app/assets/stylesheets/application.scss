@@ -11,14 +11,4 @@
  * It is generally better to create a new file per style scope.
  *
  */
- @import "bootstrap";
- @import url('https://fonts.googleapis.com/css?family=Muli');
-
- body {
-    font-family: 'Muli', sans-serif;
- }
-
- .navigation {
-    background-color: #1f127f;
-    color: #ffffff;
- }
+ @import "bootstrap-custom";
