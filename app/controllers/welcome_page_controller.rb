@@ -9,7 +9,7 @@ class WelcomePageController < ApplicationController
         user = create_guest_user
       end
     end
-
+    sign_in user
   end
 
   def robots
