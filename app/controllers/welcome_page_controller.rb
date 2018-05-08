@@ -1,5 +1,15 @@
 class WelcomePageController < ApplicationController
   def welcome
+    user_id = session[:guest_user_id]
+    if user_id.nil?
+      user = create_guest_user
+    else
+      user = User.find(user_id)
+      if user.nil?
+        user = create_guest_user
+      end
+    end
+
   end
 
   def robots
