@@ -3,9 +3,6 @@ class OrdersController < ApplicationController
   end
 
   def create
-    puts "PARAMS:--------------"
-    puts params
-    puts '---------------------'
     @order = Order.new(order_params)
     @order.save
     redirect_to @order
