@@ -1,0 +1,31 @@
+
+<div class="container-fluid">
+<div class="row justify-content-center">
+<div class="column-6">
+    <% @items.each do |item| %>   
+        <div class="row justify-content-center">
+            <div class="column-6">
+                <p><b><%=item.description%></b></p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            
+            <div class="column-6">
+                <p><i>Color:</i> <b><%=item.color%></b></p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            
+            <div class="column-6">
+                <p><i>Size:</i> <b><%=item.size%></b></p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <%=link_to "Edit", edit_order_item_path(item.order, item) %>
+        </div>
+        <hr>
+    <% end %>
+
+</div>    
+</div>
+</div>

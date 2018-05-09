@@ -1,0 +1,37 @@
+<div class="container-fluid">
+<div class="row justify-content-center">
+<div class="column-6">
+
+
+<div class="row justify-content-center">
+    
+    <div class="column-6">
+        <p><i>Email: </i> <b><%=@order.email%></b></p>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="column-6">
+        <p><i>Phone: </i><b><%=@order.phone%></b></p>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="column-6">
+        <p><i>Deliver to:</i><br><b>
+        <%=@order.fname%> <%=@order.lname%><br>
+        <% unless @order.unit_number.empty? %>
+            <%=@order.unit_number%> - 
+        <% end %>
+        <%=@order.street_address%>, 
+        <br>
+        <%=@order.city%>,
+        <%=@order.province%>,
+        <%=@order.postal%>,
+
+        </b></p>
+    </div>
+</div>
+
+</div>
+</div>
+</div>

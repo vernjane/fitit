@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   root to: "welcome_page#welcome"
   get '/robots.txt', to: 'welcome_page#robots'
 
-  resources :orders
+
+  resources :orders do
+    resources :items
+  end
+  
   
 end
