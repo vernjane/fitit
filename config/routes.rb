@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   resources :orders do
     resources :items
   end
+
+  resources :malls
   
   
 end
