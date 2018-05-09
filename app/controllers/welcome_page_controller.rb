@@ -4,7 +4,7 @@ class WelcomePageController < ApplicationController
     if user_id.nil?
       user = create_guest_user
     else
-      user = User.find(user_id)
+      user = User.find_by(id: user_id)
       if user.nil?
         user = create_guest_user
       end
