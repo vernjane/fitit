@@ -10,6 +10,14 @@ class WelcomePageController < ApplicationController
       end
     end
     sign_in user
+
+    # When user is signed it, find their last order so that 
+    # they can continue where they left off. Or create a new 
+    # order right away
+    order = user.orders.last
+    if order.nil?
+      user.orders.create()
+    end
   end
 
   def robots
