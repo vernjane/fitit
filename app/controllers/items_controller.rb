@@ -77,6 +77,19 @@ class ItemsController < ApplicationController
         # redirect to new item path
         redirect_to new_order_item_path(@order)
     end
+
+    def destroy
+        order_id = params[:order_id]
+        @order = current_user.orders.find(order_id)
+        @item = @order.items.find(params[:id])
+        @item.destroy
+        # items list is now in the new form 
+        # (so that the user can see what's already in the order)
+        # so instead of items index path (order_items_path(@order)),
+        # redirect to new item path
+        redirect_to new_order_item_path(@order)
+
+    end
     
     private
     def item_params
