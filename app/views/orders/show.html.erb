@@ -1,37 +1,36 @@
 <div class="container-fluid">
 <div class="row justify-content-center">
-<div class="column-6">
-
-
-<div class="row justify-content-center">
-    
     <div class="column-6">
-        <p><i>Email: </i> <b><%=@order.email%></b></p>
+        <h1>Order Confirmation </h1> 
     </div>
 </div>
 
 <div class="row justify-content-center">
     <div class="column-6">
-        <p><i>Phone: </i><b><%=@order.phone%></b></p>
+        <h5>Order number: <%= @order.id + 6040 %></h5> 
     </div>
 </div>
+        
 <div class="row justify-content-center">
     <div class="column-6">
-        <p><i>Deliver to:</i><br><b>
-        <%=@order.fname%> <%=@order.lname%><br>
-        <% unless @order.unit_number.nil? %>
-            <%=@order.unit_number%> - 
-        <% end %>
-        <%=@order.street_address%>, 
-        <br>
-        <%=@order.city%>,
-        <%=@order.province%>,
-        <%=@order.postal%>,
-
-        </b></p>
+        <%=render partial: "items/items_list", locals: {items: @order.items, place_order_button: false} %>
     </div>
 </div>
 
+<div class="row justify-content-center">
+    <div class="column-6">
+        <h5>Deliver to:</h5>
+        <p>
+            <%= @order.format_name %><br>
+            <%= @order.format_street_address %><br>
+            <%= @order.format_city_province_postal %>
+        </p>
+        <p>
+            Email: <%=@order.email%><br>
+            Phone: <%=@order.phone%>
+        </p>
+    </div>
 </div>
-</div>
+
+
 </div>
