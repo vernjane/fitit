@@ -27,18 +27,15 @@ class ItemsController < ApplicationController
     end
 
     def update
-        byebug
         order_id = params[:order_id]
         @order = current_user.orders.find(order_id)
         @item = @order.items.find(params[:id])
         @item.update(item_params)
         redirect_to order_items_path(@order)
-       
-        
-      end
+    end
     
     private
     def item_params
-        params.permit(:description, :color, :size)
+        params.require(:item).permit(:description, :color, :size)
     end
 end
