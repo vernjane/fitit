@@ -19,7 +19,7 @@
     <div class="column-6">
         <p><i>Deliver to:</i><br><b>
         <%=@order.fname%> <%=@order.lname%><br>
-        <% unless @order.unit_number.empty? %>
+        <% unless @order.unit_number.nil? %>
             <%=@order.unit_number%> - 
         <% end %>
         <%=@order.street_address%>, 
