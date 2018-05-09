@@ -46,7 +46,11 @@ class ItemsController < ApplicationController
         @order = current_user.orders.find(order_id)
         @item = @order.items.find(params[:id])
         @item.update(item_params)
-        redirect_to order_items_path(@order)
+        # items list is now in the new form 
+        # (so that the user can see what's already in the order)
+        # so instead of items index path (order_items_path(@order)),
+        # redirect to new item path
+        redirect_to new_order_item_path(@order)
     end
     
     private
