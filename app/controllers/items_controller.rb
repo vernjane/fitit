@@ -11,6 +11,11 @@ class ItemsController < ApplicationController
         # this is needed to show all items already added to the order
         @items = @order.items
         
+        # Side note:
+        # In the items_list partial you'll see a check for
+        # item.id.nil? This is needed b/c aparently that 
+        # @order.items.new is being included in the order.items list.
+        # Fuck knows why, and, tbh, who cares.
         
     end
 
