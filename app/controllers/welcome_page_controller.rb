@@ -18,6 +18,8 @@ class WelcomePageController < ApplicationController
     if order.nil?
       user.orders.create()
     end
+
+    UserMailer.welcome_email.deliver_now
   end
 
   def robots
