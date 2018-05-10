@@ -4,7 +4,9 @@
             <h1 style="text-align: center">Clothes delivered in as little<br>as 2 hours</h1>
         </div>
     </div>
+
     <br>
+
     <div class="row justify-content-center">
         <div class="column-4 px-3">
         <%= form_tag({controller: "malls", action: "index"}, method: "get") do %>
@@ -14,7 +16,53 @@
         <% end %>
         </div>
     </div>
-</div>
+    
+    <br>
+    <hr>
+
+    <div class="row justify-content-around py-5">
+
+        <div class="column-3 px-3 py-3 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Describe It</h5>
+                    <p class="card-text">You can be as broad as 
+                    <span class="desc-example">Skinny jeans, black or dark blue, size 10 (I think)</span> 
+                    or as specific as 
+                    <span class="desc-example">American Eagle Outfitters, AE Denim X4 Skinny Jeans, color: Jet Onyx, size: 10 Regular</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column-3 px-3 py-3 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Order It</h5>
+                    <p class="card-text">Give us 2 hours.<br>Our shopper will go to a local mall and bring you everything that fits your description.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column-3 px-3 py-3 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Try It On</h5>
+                    <p class="card-text">You can try everything on and only keep what fits. <br>Not sure about size?<br>No problem, we'll bring each item in 2-3 different sizes</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column-3 px-3 py-3 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Pay For It</h5>
+                    <p class="card-text">Yes, in this exact order.<br>Pay AFTER you try it on <br>(and not before).<br>No upfront payment needed. <br>We accept all major credit cards and cash.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
     <hr>
 
     <div class="row justify-content-center">        
@@ -41,4 +89,5 @@
         <%= image_tag "pink.png", class: "font-weight-normal", alt: "Pink same day delivery" %>
         <%= image_tag "carters.png", class: "font-weight-normal", alt: "Carter's OshKosh same day delivery" %>
         <%= image_tag "guess.png", class: "font-weight-normal", alt: "Guess same day delivery" %>
+    </div>
     </div>

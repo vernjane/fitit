@@ -9,6 +9,17 @@
  @import url('https://fonts.googleapis.com/css?family=Muli');
 
 
+ /* 
+ I had to copy these 2 from 
+ https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss
+ I guess I need to import these _variables.scss file to be able to use
+ bootstrap variables. Fuck know, I don't care for now, I just need
+ $font-size-base. Figure it out later.
+ */
+ $font-size-base: 14px !default;
+ $font-size-small: ceil(($font-size-base * 0.6)) !default; // ~12px
+
+
 
 @mixin column($size) {
     @include media-breakpoint-up(xs) {
@@ -86,3 +97,11 @@ $white: #ffffff;
     background-color: $purple;
     color: $white;
  }
+
+ .desc-example {
+    font-weight: bold;
+    font-style: italic;
+    display: block;
+    font-size: $font-size-base/1.2;
+    line-height: $font-size-base;
+}
