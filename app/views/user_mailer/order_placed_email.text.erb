@@ -1,0 +1,27 @@
+
+
+Order placed. User <%= @user.id %>
+============================================
+
+User: <%= @user.email %>, id: <%= @user.id %>
+
+Order: <%= @order.id %> Postal: <%=@order.postal%>
+
+Customer email: <%= @order.email %>
+Customer phone: <%= @order.phone %>
+Customer first name: <%= @order.fname %>
+Customer last name: <%= @order.lname %>
+Customer email: <%= @order.email %>
+Customer phone: <%= @order.phone %>
+Address: 
+    <%= @order.street_address %>, 
+    Unit <%= @order.unit_number %>, 
+    <%= @order.city %>, 
+    <%= @order.postal %>
+    
+    
+<% @items.each do |item| %>
+    Description: <%= item.description %>
+    Color: <%= item.color %>
+    Size: <%= item.size %>
+<% end %>

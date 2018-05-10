@@ -15,6 +15,9 @@ class OrdersController < ApplicationController
   def create
     @order = current_user.orders.new(order_params)
     @order.save
+
+    UserMailer.order_placed_email(@order).deliver_now
+
     redirect_to @order
   end
 
@@ -30,6 +33,9 @@ class OrdersController < ApplicationController
     order_id = params[:id]
     @order = current_user.orders.find(order_id)
     @order.update(order_params)
+
+    UserMailer.order_placed_email(@order).deliver_now
+
     redirect_to order_path(@order)
 end
 
