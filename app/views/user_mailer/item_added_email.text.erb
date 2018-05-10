@@ -1,0 +1,16 @@
+
+
+User <%= @user.id %> added an item to cart
+============================================
+
+User: <%= @user.email %>, id: <%= @user.id %>
+
+Order: <%= @order.id %> Postal: <%=@order.postal%>
+
+Customer email: <%= @order.email %>
+    
+<% @items.each do |item| %>
+    Description: <%= item.description %>
+    Color: <%= item.color %>
+    Size: <%= item.size %>
+<% end %>

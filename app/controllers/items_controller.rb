@@ -49,6 +49,7 @@ class ItemsController < ApplicationController
         order_id = params[:order_id]
         @order = current_user.orders.find(order_id)
         @order.items.create(item_params)
+        UserMailer.item_added_email(@order).deliver_now
         # items list is now in the new form 
         # (so that the user can see what's already in the order)
         # so instead of items index path (order_items_path(@order)),

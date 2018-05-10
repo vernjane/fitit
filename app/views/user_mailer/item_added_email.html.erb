@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>User <%=@user.id %> added an item to cart</h1>
+
+    <h3>User: <%= @user.email %>, id: <%= @user.id %></h3>
+    <h3>Order: <%= @order.id %> Postal: <%=@order.postal%></h3>
+
+    <h3>Customer email: <%= @order.email %></h3>
+    
+    <% @items.each do |item| %>
+      <p>Description: <%= item.description %></p>
+      <p>Color: <%= item.color %></p>
+      <p>Size: <%= item.size %></p>
+    <% end %>
+  </body>
+</html>
