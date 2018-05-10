@@ -43,6 +43,10 @@ class ItemsController < ApplicationController
     def edit
         @order = current_user.orders.find(params[:order_id])
         @item = @order.items.find(params[:id])
+
+        # this is needed b/c the view calls "items_list" partial
+        @items = @order.items
+        @place_order_button = is_place_order_button_needed(@items)
     end
 
     def create
