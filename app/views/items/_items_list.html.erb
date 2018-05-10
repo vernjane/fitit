@@ -1,37 +1,26 @@
 <% items.each do |item| %>   
-    <% unless item.id.nil?%>
-        <div class="row justify-content-center">
-            <div class="column-6">
-                <p><b><%=item.description%></b></p>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            
-            <div class="column-6">
-                <p><i>Color:</i> <b><%=item.color%></b></p>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            
-            <div class="column-6">
-                <p><i>Size:</i> <b><%=item.size%></b></p>
-            </div>
-        </div>
+    <% unless item.id.nil? %>
         
-        <div class="row justify-content-center">
-            <%=link_to "Edit", edit_order_item_path(item.order, item) %>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><%=item.description%></h5>
+                <p class="card-text">
+                    <i>Color:</i> <b><%=item.color%></b><br>
+                    <i>Size:</i> <b><%=item.size%></b>
+                </p>
+                <%= link_to "Edit", edit_order_item_path(item.order, item), class: "btn btn-primary" %>
+                <%= link_to "Remove", order_item_path(item.order, item), class: "btn btn-primary", method: :delete %>
+            </div>
         </div>
-
-        <div class="row justify-content-center">
-            <%= link_to 'Destroy', order_item_path(item.order, item),
-                    method: :delete %>
-        </div>
-        <hr>
-    <% end %>
     
+    <% end %>
 <% end %>
 
 <% if place_order_button %>
     <% @order = items.last.order %>
-    <%= link_to "Place order", edit_order_path(@order) %>
+    <div class="row justify-content-center my-3">
+        <div class="column-11">
+        <%= link_to "Place order", edit_order_path(@order), class: "btn btn-success btn-block" %>
+        </div>
+    </div>
 <% end %>
