@@ -24,5 +24,9 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+
+  <% if Rails.env.production? %>
+    <%= render partial: "tamboo" %>
+  <% end %>
   </body>
 </html>
