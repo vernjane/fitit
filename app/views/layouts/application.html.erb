@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  
     <title>Try It On Today - Same Day Clothes Delivery</title>
     <%=favicon_link_tag 'favicon.ico'%>
     <%= csrf_meta_tags %>
@@ -9,9 +10,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <%= render partial: "google_analytics" %>
-    <%= render partial: "g_suite_verification" %>
-  
+    <% if Rails.env.production? %>
+      <%= render partial: "google_analytics" %>
+      <%= render partial: "g_suite_verification" %>
+    <% end %>
+
   </head>
 
   <body>
