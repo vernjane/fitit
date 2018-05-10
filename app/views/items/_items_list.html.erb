@@ -31,7 +31,7 @@
     
 <% end %>
 
-<% if @place_order_button %>
+<% if place_order_button %>
     <% @order = items.last.order %>
     <%= link_to "Place order", edit_order_path(@order) %>
 <% end %>
