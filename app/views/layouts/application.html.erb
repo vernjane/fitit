@@ -18,12 +18,33 @@
   </head>
 
   <body>
+
   <div class="navigation d-flex justify-content-center border-bottom box-shadow">
     <%= image_tag "fitit-logo.png", class: "font-weight-normal" %>
   </div>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+    
+  <%= yield %>
+
+  <footer class="footer">
+      <div class="container">
+        <div class="row trademark justify-content-center py-3">
+          <div class="column-3 small">
+            2017-2018 TRY IT ON TODAY <br>
+            All rights reserved <br>
+            Red Pineapple Technologies Inc.<br>
+            6-1500 Upper Middle Road West, Suite 141 <br>
+            Oakville, ON, Canada L6M 0C2<br>
+            <span>Text: </span><a href="sms:16479970670" class="footer-link">+1 647 997 0670</a><br>
+            <span>Call:  </span><a href="tel:16479970670" class="footer-link">+1 647 997 0670</a><br>
+            <span>Email: </span><a href="mailto:info@tryitontoday.com" class="footer-link">info@tryitontoday.com</a></br>
+            <%=link_to "Vectors graphics designed by Freepik", "http://www.freepik.com/" %>
+          </div>
+        </div>
+      </div>
+  </footer>
 
   <% if Rails.env.production? %>
     <%= render partial: "tamboo" %>

@@ -11,4 +11,28 @@
  * It is generally better to create a new file per style scope.
  *
  */
- @import "bootstrap-custom";
+@import "bootstrap-custom";
+
+/** CSS for footer */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 205px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 205px;
+    background-color: $pink;
+}
+
+/** CSS for footer */
+
+  
