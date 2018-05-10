@@ -1,12 +1,12 @@
 <div class="container-fluid">
 <div class="row justify-content-center">
-    <div class="column-6">
+    <div class="column-6 text-center">
         <h1>Order Confirmation </h1> 
     </div>
 </div>
 
 <div class="row justify-content-center">
-    <div class="column-6">
+    <div class="column-6 text-center">
         <h5>Order number: <%= @order.id + 6040 %></h5> 
     </div>
 </div>
@@ -17,8 +17,8 @@
     </div>
 </div>
 
-<div class="row justify-content-center">
-    <div class="column-6">
+<div class="row justify-content-center my-3">
+    <div class="column-6 text-center">
         <h5>Deliver to:</h5>
         <p>
             <%= @order.format_name %><br>
