@@ -1,11 +1,16 @@
 <div class="container-fluid">
 <div class="row justify-content-center">
-<div class="column-6">
+    
+    <% if @place_order_button %>
+        <div class="column-6">
+            <%= render partial: "items_list", locals: {items: @items, place_order_button: @place_order_button} %>
+        </div>
+    <% end %>
 
-<%= render partial: "items_list", locals: {items: @items, place_order_button: @place_order_button} %>
-<%= render partial: "item_form" %>
+    <div class="column-6">
+        <%= render partial: "item_form" %>
+    </div>
 
-</div>
 </div>
 </div>
 
