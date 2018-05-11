@@ -45,6 +45,32 @@
         <%= f.text_field :postal, class: "form-control", placeholder: "e.g. L0M 0K7", :required => true %>
     </div>
 
+    <div class="form-check">
+        <%= f.radio_button :delivery, "16", class: "form-check-input"%>
+        <%= f.label :delivery, "4:00-5:00PM", class: "form-check-label"%>
+    </div>
+
+    <div class="form-check">
+        <%= f.radio_button :delivery, "17", class: "form-check-input"%>
+        <%= f.label :delivery, "5:00-6:00PM", class: "form-check-label"%>
+    </div>
+
+    <div class="form-check">
+        <%= f.radio_button :delivery, "18", class: "form-check-input"%>
+        <%= f.label :delivery, "6:00-7:00PM", class: "form-check-label"%>
+    </div>
+
+    <div class="form-check">
+        <%= f.radio_button :delivery, "19", class: "form-check-input"%>
+        <%= f.label :delivery, "7:00-8:00PM", class: "form-check-label"%>
+    </div>
+
+    <div class="form-check">
+        <%= f.radio_button :delivery, "20", class: "form-check-input"%>
+        <%= f.label :delivery, "8:00-9:00PM", class: "form-check-label"%>
+    </div>
+
+    
     <%= f.submit "Place order", class: "btn btn-success btn btn-block my-3" %>
 
 <% end %>
