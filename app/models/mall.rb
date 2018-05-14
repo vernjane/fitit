@@ -2,6 +2,7 @@ class Mall < ApplicationRecord
     acts_as_mappable   
     
     has_many :orders
+    has_and_belongs_to_many :stores
 
     # This is for populating the db with mall locations
     def self.populate

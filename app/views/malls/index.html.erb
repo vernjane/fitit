@@ -11,15 +11,16 @@
 
     <% @malls.each do |mall| %>   
         <div class="row">
-            <div class="col-12">
+            <div class="column-4 px-3">
                 <p><%=mall.name%></p>
-            </div>
-            <div class="col-12">
                 <p><%=mall.address%></p>
-            </div>
-            <div class="col-12">
                 <%=link_to "Select", mall_path(mall.id), class: "btn btn-success" %>
             </div>
+            <div class="column-8 px-3 mall-stores">
+                <% mall.stores.each do |store| %>
+                    <%= image_tag "#{store.logo}", class: "font-weight-normal m-1 border", alt: "#{store.name} same day delivery" %>
+                <% end %>
+                </div>
         </div>
         <hr>
     <% end %>
