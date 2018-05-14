@@ -48,38 +48,7 @@ class OrdersController < ApplicationController
     redirect_to order_path(@order)
   end
 
-  def calculate_avalable_time
-    # the order happens 
-    t = Time.now()
-
-    # Let's assume all malls open at 10, and close at 8 on weekdays and 5 on weekends
-    open_hour = 10
-    close_hour = t.weekday? ? 20 : 17
-
-    open_t = Time.new(t.year, t.month, t.day, open_hour, 0, 0, 0)
-    close_t = Time.new(t.year, t.month, t.day, close_hour, 0, 0, 0)
-
-    # So earliest delivery will be 13-14; latest delivery will be 9-10(weekdays) or 6-7(weekends)
-    
-    # let's round current time to deal with whole numbers
-    t = round_time(t)
-
-    
-    # 1) lets check if mall is already open
-    mall_open = (t <= (close_t - 2.hours)) && (open_t <= t)
-
-    # 2) lets check if we have more than 2 hours before the mall closes
-    mall_closed = t = 
-
-
-
-    def round_time(time)
-      return (time + 30.minutes).beginning_of_hour
-    end
-
-
-  end
-
+  
   
   private
   def order_params

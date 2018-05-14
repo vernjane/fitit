@@ -49,16 +49,14 @@
         <label> Deliver today at:</label>
     </div>
 
-    <div class="form-check">
-        <%= f.radio_button :delivery, "19", class: "form-check-input"%>
-        <%= f.label :delivery, "7:00-8:00PM", class: "form-check-label"%>
-    </div>
-
-    <div class="form-check">
-        <%= f.radio_button :delivery, "20", class: "form-check-input"%>
-        <%= f.label :delivery, "8:00-9:00PM", class: "form-check-label"%>
-    </div>
-
+    <% available_times = Order.calculate_avalable_time %>
+    
+    <% available_times.each do |time| %>
+        <div class="form-check">
+            <%= f.radio_button :delivery, "#{time}", class: "form-check-input"%>
+            <%= f.label :delivery, "#{Order.time_for_display(time)}", class: "form-check-label"%>
+        </div>
+    <% end %>
     
     <%= f.submit "Place order", class: "btn btn-success btn btn-block my-3" %>
 
