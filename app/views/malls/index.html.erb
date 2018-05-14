@@ -17,7 +17,9 @@
             <div class="col-12">
                 <p><%=mall.address%></p>
             </div>
-            <%=link_to "Select", mall_path(mall.id)%>
+            <div class="col-12">
+                <%=link_to "Select", mall_path(mall.id), class: "btn btn-success" %>
+            </div>
         </div>
         <hr>
     <% end %>
