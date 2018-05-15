@@ -34,4 +34,15 @@ class Mall < ApplicationRecord
         location = GEOCODER.geocode(address)
         return self.distance_to(location)
     end
+
+    def get_delivery_price(address=nil)
+        return nil if address.nil?
+        distance = self.get_distance(address)
+        price = (distance * 1.5).round
+        price = 5 if price < 5 
+        price = 15 if price > 15
+        price = price - 0.01
+        return price
+    end 
+
 end
