@@ -37,6 +37,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'capybara'
+gem 'selenium-webdriver'
+
 
 gem 'bootstrap'
 gem 'bootstrap-sass'
